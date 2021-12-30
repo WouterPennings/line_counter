@@ -8,13 +8,13 @@ using line_counter;
 long CountLinesLINQ(string filename)  
     => File.ReadLines(filename).Count();
 
-List<string> allowedExtentions = new() { ".rs" };
+List<string> allowedExtensions = args.ToList();
 List<string> trackedFiles = new();
 string path = Directory.GetCurrentDirectory();
 Crawler crawler = new();
 
 Console.WriteLine("\n\nTracking file with extension: ");
-foreach (string extension in allowedExtentions)
+foreach (string extension in allowedExtensions)
 {
     Console.WriteLine(" > " + extension);
 }
@@ -27,7 +27,7 @@ Console.WriteLine("\nFiles found with the correct extension: ");
 crawler.CrawlDirectory(path, out List<string> files, out List<string> _);
 foreach (string file in files)
 {
-    if (allowedExtentions.Contains(Path.GetExtension(file)))
+    if (allowedExtensions.Contains(Path.GetExtension(file)))
     {
         Console.WriteLine(" > " + file);
         trackedFiles.Add(file);
