@@ -1,0 +1,16 @@
+C:\Users\woute\Documents\programming\personal\line_counter\bin\Debug\net6.0\line_counter.exe
+C:\Users\woute\Documents\programming\personal\line_counter\bin\Debug\net6.0\line_counter.deps.json
+C:\Users\woute\Documents\programming\personal\line_counter\bin\Debug\net6.0\line_counter.runtimeconfig.json
+C:\Users\woute\Documents\programming\personal\line_counter\bin\Debug\net6.0\line_counter.dll
+C:\Users\woute\Documents\programming\personal\line_counter\bin\Debug\net6.0\ref\line_counter.dll
+C:\Users\woute\Documents\programming\personal\line_counter\bin\Debug\net6.0\line_counter.pdb
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\line_counter.GlobalUsings.g.cs
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\line_counter.csproj.AssemblyReference.cache
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\line_counter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\line_counter.AssemblyInfoInputs.cache
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\line_counter.AssemblyInfo.cs
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\line_counter.csproj.CoreCompileInputs.cache
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\line_counter.dll
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\ref\line_counter.dll
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\line_counter.pdb
+C:\Users\woute\Documents\programming\personal\line_counter\obj\Debug\net6.0\line_counter.genruntimeconfig.cache

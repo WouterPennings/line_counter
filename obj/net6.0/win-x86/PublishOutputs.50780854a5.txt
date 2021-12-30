@@ -1,0 +1,5 @@
+C:\Users\woute\Documents\programming\personal\line_counter\bin\net6.0\publish\line_counter.exe
+C:\Users\woute\Documents\programming\personal\line_counter\bin\net6.0\publish\line_counter.dll
+C:\Users\woute\Documents\programming\personal\line_counter\bin\net6.0\publish\line_counter.deps.json
+C:\Users\woute\Documents\programming\personal\line_counter\bin\net6.0\publish\line_counter.runtimeconfig.json
+C:\Users\woute\Documents\programming\personal\line_counter\bin\net6.0\publish\line_counter.pdb
