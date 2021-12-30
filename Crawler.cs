@@ -26,7 +26,7 @@ namespace line_counter
         
         private List<string> GetSubDirectoriesContent(string dir, out List<string> files)
         {
-            Convert.ToString(5);
+            //Convert.ToString(5);
             List<string> folders = new();
             List<string> newFiles = new();
             newFiles.AddRange(Directory.GetFiles(dir).ToList());
