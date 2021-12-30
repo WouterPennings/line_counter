@@ -8,30 +8,46 @@ using line_counter;
 long CountLinesLINQ(string filename)  
     => File.ReadLines(filename).Count();
 
-List<string> allowedExtensions = args.ToList();
+List<string> allowedExtensions = args.ToList().Any() ? args.ToList() : new();
 List<string> trackedFiles = new();
 string path = Directory.GetCurrentDirectory();
 Crawler crawler = new();
 
-Console.WriteLine("\n\nTracking file with extension: ");
-foreach (string extension in allowedExtensions)
+
+if (allowedExtensions.Count > 0)
 {
-    Console.WriteLine(" > " + extension);
+    Console.WriteLine("\n\nTracking file with extension: ");
+    foreach (string extension in allowedExtensions)
+    {
+        Console.WriteLine(" > " + extension);
+    }
+}
+else
+{
+    Console.WriteLine("\n\nTracking all files.");
 }
 Thread.Sleep(500);
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("This may take a while, greatly depends on the directory that was chosen.");
 
 Console.ForegroundColor = ConsoleColor.White;
-Console.WriteLine("\nFiles found with the correct extension: ");
 crawler.CrawlDirectory(path, out List<string> files, out List<string> _);
-foreach (string file in files)
+if (allowedExtensions.Count > 0)
 {
-    if (allowedExtensions.Contains(Path.GetExtension(file)))
+    Console.WriteLine("\nFiles found with the correct extension: ");
+    foreach (string file in files)
     {
-        Console.WriteLine(" > " + file);
-        trackedFiles.Add(file);
-    }
+        if (allowedExtensions.Contains(Path.GetExtension(file)))
+        {
+            Console.WriteLine(" > " + file);
+            trackedFiles.Add(file);
+        }
+    } 
+}
+else
+{
+    Console.WriteLine("\nGot all files in sight!");
+    trackedFiles = files;
 }
 
 Console.WriteLine("\nDone crawling! Got all files with a extension in the list.");
