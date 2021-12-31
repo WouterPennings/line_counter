@@ -12,9 +12,9 @@ namespace line_counter
             List<string> newFolders = new();
             List<string> newFiles = new();
             newFolders.Add(startDirectory);
-            newFiles.AddRange(Directory.GetFiles(startDirectory).ToList());
             try
             {
+                newFiles.AddRange(Directory.GetFiles(startDirectory).ToList());
                 foreach (string sub in Directory.GetDirectories(startDirectory))
                 {
                     newFolders.Add(sub);
