@@ -13,13 +13,17 @@ namespace line_counter
             List<string> newFiles = new();
             newFolders.Add(startDirectory);
             newFiles.AddRange(Directory.GetFiles(startDirectory).ToList());
-            foreach (string sub in Directory.GetDirectories(startDirectory))
+            try
             {
-                newFolders.Add(sub);
-                newFolders.AddRange(GetSubDirectoriesContent(sub, out List<string> newFiles2));
-                newFiles.AddRange(newFiles2);
+                foreach (string sub in Directory.GetDirectories(startDirectory))
+                {
+                    newFolders.Add(sub);
+                    newFolders.AddRange(GetSubDirectoriesContent(sub, out List<string> newFiles2));
+                    newFiles.AddRange(newFiles2);
+                }
             }
-
+            catch { }
+            
             files = newFiles;
             folders = newFolders;
         }
@@ -39,10 +43,7 @@ namespace line_counter
                     newFiles.AddRange(newFiles2);
                 }
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
+            catch { }
 
             files = newFiles;
             return folders;

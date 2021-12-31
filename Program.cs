@@ -16,7 +16,7 @@ Crawler crawler = new();
 
 if (allowedExtensions.Count > 0)
 {
-    Console.WriteLine("\n\nTracking file with extension: ");
+    Console.WriteLine("\nTracking file with extension: ");
     foreach (string extension in allowedExtensions)
     {
         Console.WriteLine(" > " + extension);
@@ -52,11 +52,28 @@ else
 
 Console.WriteLine("\nDone crawling! Got all files with a extension in the list.");
 Thread.Sleep(500);
-Console.WriteLine("Starting to count all lines of text in those files.");
+Console.WriteLine("Starting to count all lines of text in those files...");
 long totalLines = 0;
-foreach (string file in trackedFiles)
+List<string> errors = new List<string>();
+var current = "";
+try
 {
-    totalLines += CountLinesLINQ(file);
+    foreach (var file in trackedFiles)
+    {
+        current = file;
+        totalLines += CountLinesLINQ(file);
+    }
+}
+catch
+{
+    
+    errors.Add(current);
+}
+Console.ForegroundColor = ConsoleColor.Red;
+if (errors.Any()) Console.WriteLine("Files that were unable to be opened");
+foreach (var error in errors)
+{
+    Console.WriteLine(" > " + error);
 }
 
 Console.ForegroundColor = ConsoleColor.Blue;
