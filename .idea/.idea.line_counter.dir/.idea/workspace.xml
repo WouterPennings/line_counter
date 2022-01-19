@@ -4,9 +4,7 @@
     <projectFile>line_counter.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9a4407a-7546-4826-a642-ec5dcc8fdfc9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Crawler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler.cs" afterDir="false" />
-    </list>
+    <list default="true" id="f9a4407a-7546-4826-a642-ec5dcc8fdfc9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640874362211</updated>
       <workItem from="1640874364959" duration="5364000" />
-      <workItem from="1640956937583" duration="1413000" />
+      <workItem from="1640956937583" duration="2006000" />
     </task>
     <servers />
   </component>
