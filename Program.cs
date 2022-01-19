@@ -11,8 +11,12 @@ long CountLinesLINQ(string filename)
 List<string> allowedExtensions = args.ToList().Any() ? args.ToList() : new();
 List<string> trackedFiles = new();
 string path = Directory.GetCurrentDirectory();
-Crawler crawler = new();
 
+/*
+The crawler has been copied from a previous project of mine.
+Link to original implementation: https://github.com/WouterPennings/DirectoryCrawler
+*/
+Crawler crawler = new();
 
 if (allowedExtensions.Count > 0)
 {
